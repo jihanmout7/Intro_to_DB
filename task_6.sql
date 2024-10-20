@@ -8,3 +8,5 @@ VALUES
     (3, 'Obed Ehoneah', 'eobed@sandtech.com', '125 Happiness Ave.'),
     (4, 'Nehemial Kamolu', 'nkamolu@sandtech.com', '126 Happiness Ave.');
 INSERT INTO customer", 124 Happiness  Ave.
+INSERT INTO customer", 125 Happiness  Ave.
+INSERT INTO customer", 126 Happiness  Ave.
