@@ -3,7 +3,7 @@ from mysql.connector import Error
 
 def create_database():
     try:
-        # Connect to MySQL server
+        # Attempt to connect to the MySQL server
         connection = mysql.connector.connect(
             host='localhost',
             user='root',
@@ -12,15 +12,16 @@ def create_database():
 
         if connection.is_connected():
             cursor = connection.cursor()
-            # Create the database
+            # Create the database if it does not exist
             cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
             print("Database 'alx_book_store' created successfully!")
     
     except Error as e:
+        # Handle any errors that occur during connection or execution
         print(f"Error: {e}")
     
     finally:
-        # Clean up
+        # Ensure that resources are cleaned up
         if connection.is_connected():
             cursor.close()
             connection.close()
